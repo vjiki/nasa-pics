@@ -16,10 +16,14 @@ General code layout
 Extensibility of the solution
 It is not as important that the implementation actually works as the overall structure and design of the API.
 The problem
+
 You are requested to implement an API that can be used to display daily images from the rovers that are on Mars.
+
 For a start, your API should be able to get the navigation camera images from the curiosity rover
 from the last 10 days and limit the number of images to 3 per day.
+
 If there are no images for a particular day the result for that day should be empty.
+
 The entry point for your API should be a minimal command-line script.
 
 NASA provides a simple HTTP API that allows for querying of rover images.
@@ -34,6 +38,7 @@ but your solution should be easily extended to support multiple rovers, cameras,
 
 In order to not query the NASA API every time the navigation camera images from the last 10 days are requested,
 you should implement a caching layer.
+
 It is not as important where your API caches (be it files, memory, or something else),
 the actual cache implementation should be easily replaced with something else.
 
