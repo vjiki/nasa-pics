@@ -1,0 +1,5 @@
+{
+  "roverIds": [100],
+  "cameraIds": [100],
+  "endpoints": ["https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/"]
+}
