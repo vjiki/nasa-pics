@@ -25,5 +25,6 @@ hs_err_pid*
 /.gradle/
 /.idea/
 /build/
+/cache/
 /out/
 /private/
