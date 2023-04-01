@@ -20,8 +20,10 @@ package com.github.vjiki.model.response;
 //            }
 //        }
 
+import java.io.Serializable;
+
 //@Data
-public class Photo {
+public class Photo implements Serializable {
     private int id;
     private int sol;
     private Camera camera;

@@ -7,10 +7,10 @@ package com.github.vjiki.model.response;
 //                "full_name": "Navigation Camera"
 //            },
 
-import lombok.Data;
+import java.io.Serializable;
 
 //@Data
-public class Camera {
+public class Camera implements Serializable {
     private int id;
     private String name;
     private int rover_id;

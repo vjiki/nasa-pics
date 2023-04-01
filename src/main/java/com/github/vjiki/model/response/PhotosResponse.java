@@ -25,6 +25,7 @@ package com.github.vjiki.model.response;
 //    ]
 //}
 
+import java.io.Serializable;
 import java.util.List;
 
 //@Data
@@ -32,7 +33,8 @@ import java.util.List;
 //@Setter
 //@ToString
 //@NoArgsConstructor
-public class PhotosResponse {
+//@Data
+public class PhotosResponse implements Serializable {
     List<Photo> photos;
 
     public List<Photo> getPhotos() {

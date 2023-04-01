@@ -8,12 +8,10 @@ package com.github.vjiki.model.response;
 //                "status": "active"
 //            }
 
-import lombok.Data;
 
-import java.util.Date;
+import java.io.Serializable;
 
-//@Data
-public class Rover {
+public class Rover implements Serializable {
     private int id;
     private String name;
     private String landing_date;
