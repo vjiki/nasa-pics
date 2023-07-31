@@ -30,13 +30,15 @@ public class ReportService {
     private final DateGenerator dateGenerator;
     private final ObjectMapper objectMapper;
     private final Cache<String, PhotosResponse> cache;
+    private final String photosApiConfigPath;
 
-    public ReportService(NasaHttpClient nasaHttpClient, PhotoProcessor photoProcessor, DateGenerator dateGenerator, ObjectMapper objectMapper, Cache<String, PhotosResponse> cache) {
+    public ReportService(NasaHttpClient nasaHttpClient, PhotoProcessor photoProcessor, DateGenerator dateGenerator, ObjectMapper objectMapper, Cache<String, PhotosResponse> cache, String photosApiConfigPath) {
         this.nasaHttpClient = nasaHttpClient;
         this.photoProcessor = photoProcessor;
         this.dateGenerator = dateGenerator;
         this.objectMapper = objectMapper;
         this.cache = cache;
+        this.photosApiConfigPath = photosApiConfigPath;
     }
 
     public void preparePhotosReport() throws IOException, InterruptedException, URISyntaxException {
@@ -44,7 +46,7 @@ public class ReportService {
         List<String> daysList = new ArrayList<>();
 
         PhotosRequest photosRequest = objectMapper.readValue(
-                new File("src/main/resources/photosApi.json"),
+                new File(photosApiConfigPath),
                 PhotosRequest.class);
 
         dateGenerator.getLastDaysFromNow(daysList,photosRequest.getDays()-1);

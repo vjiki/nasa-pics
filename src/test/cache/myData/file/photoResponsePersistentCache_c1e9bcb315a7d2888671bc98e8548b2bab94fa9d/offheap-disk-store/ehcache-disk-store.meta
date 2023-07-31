@@ -1,0 +1,4 @@
+#Key and value types
+#Sun Apr 09 12:27:29 CEST 2023
+valueType=com.github.vjiki.model.response.PhotosResponse
+keyType=java.lang.String
